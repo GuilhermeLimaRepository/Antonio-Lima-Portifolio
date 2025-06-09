@@ -1,190 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tony's QA Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tony's QA Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .container {
-      max-width: 700px;
-      width: 100%;
-      text-align: center;
-    }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
 
-    img.profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
+        img.profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
 
-    h1 {
-      color: #2c3e50;
-    }
+        h1 {
+            color: #2c3e50;
+        }
 
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .links {
-      margin: 1rem 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+        .links {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-    .links a {
-      font-size: 1.1rem;
-    }
+        .links a {
+            font-size: 1.1rem;
+        }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    ul li {
-      margin: 0.5rem 0;
-    }
+        ul li {
+            margin: 0.5rem 0;
+        }
 
-    .cv-buttons {
-      margin-top: 1rem;
-    }
+        .cv-buttons {
+            margin-top: 1rem;
+        }
 
-    .cv-buttons button {
-      margin: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border: none;
-      background-color: #2980b9;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        .cv-buttons button {
+            margin: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border: none;
+            background-color: #2980b9;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    .cv-buttons button:hover {
-      background-color: #1f6391;
-    }
+        .cv-buttons button:hover {
+            background-color: #1f6391;
+        }
 
-    .language-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-    }
+        .language-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+        }
 
-    .language-toggle button {
-      padding: 0.4rem 0.8rem;
-      margin-left: 0.5rem;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
+        .language-toggle button {
+            padding: 0.4rem 0.8rem;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
 
-      img.profile {
-        width: 120px;
-        height: 120px;
-      }
+            img.profile {
+                width: 120px;
+                height: 120px;
+            }
 
-      .cv-buttons button {
-        width: 100%;
-        margin: 0.3rem 0;
-      }
+            .cv-buttons button {
+                width: 100%;
+                margin: 0.3rem 0;
+            }
 
-      .language-toggle {
-        position: static;
-        margin-bottom: 1rem;
-      }
-    }
-  </style>
+            .language-toggle {
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
-<body>
-  <div class="language-toggle">
-    <button onclick="setLanguage('en')">🇬🇧 English</button>
-    <button onclick="setLanguage('pt')">🇧🇷 Português</button>
-  </div>
 
-  <div class="container">
-    <img src="photo.png" alt="Profile picture" class="profile"/>
-    <h1 id="title">Hello! I'm Antonio Lima</h1>
-    <p id="description">
-        Quality Assurance Engineer with solid experience since 2015, specializing in testing across Mobile, Web, and Back-End platforms. Proven ability to handle the full QA cycle, including test planning, design, execution, bug reporting, and documentation.
+<body>
+    <div class="language-toggle">
+        <button onclick="setLanguage('en')">🇬🇧 English</button>
+        <button onclick="setLanguage('pt')">🇧🇷 Português</button>
+    </div>
+
+    <div class="container">
+        <img src="photo.png" alt="Profile picture" class="profile" />
+        <h1 id="title">Hello! I'm Antonio Lima</h1>
+        <p id="description">
+            Quality Assurance Engineer with solid experience since 2015, specializing in testing across Mobile, Web, and
+            Back-End platforms. Proven ability to handle the full QA cycle, including test planning, design, execution,
+            bug reporting, and documentation.
+            Skilled in automated testing using top frameworks and languages for mobile apps, front-end web interfaces,
+            and APIs, with hands-on experience in tools such as Appium, Selenium, Rest Assured, and Cypress.
+            Strong background in Continuous Integration (CI) and version control systems like Git, Jenkins, Docker, and
+            others.
+            Deeply familiar with Agile methodologies including Scrum, Kanban, Lean, XP, and Agile testing practices.
+            Fluent in English and experienced in collaborating with international teams across multiple time zones,
+            contributing to global products with high quality standards.
+
+            Not only capable of executing and leading QA processes, but also of implementing quality assurance from
+            scratch in companies of any size and maturity level.
+            Additionally, I actively teach and mentor QA professionals, conducting workshops, training sessions, and
+            creating content through my YouTube channel QAlizando, dedicated to education in software quality:
+            youtube.com/@qalizando.
+        </p>
+
+        <div class="links">
+            <a href="https://www.linkedin.com/in/antonio-lima-qalizando/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/GuilhermeLimaRepository" target="_blank">GitHub</a>
+            <a href="https://youtube.com/@qalizando" target="_blank">YouTube</a>
+        </div>
+
+        <h2 id="projects-title">My Projects:</h2>
+        <ul id="projects">
+            <li><a href="https://github.com/GuilhermeLimaRepository/Cypress-POC" target="_blank">Front-End E2E Tests
+                    with Cypress</a></li>
+            <li><a href="https://github.com/GuilhermeLimaRepository/HttPartyTest" target="_blank">API Tests with
+                    HTTParty</a></li>
+            <li><a href="https://github.com/GuilhermeLimaRepository/Appium-WebDrive-IO-POC" target="_blank">Mobile E2E
+                    Test</a></li>
+        </ul>
+
+        <div class="cv-buttons">
+            <p id="download-cv-text"><strong>Download my CV:</strong></p>
+            <a href="resume-eng.pdf" download><button>📄 English</button></a>
+            <a href="resume-eng.pdf" download><button>📄 Português</button></a>
+        </div>
+
+        <p>📫 <strong id="contact-label">Contact:</strong> <a href="mailto:tgee565@gmail.com">tgee565@gmail.com"</a></p>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Hello! I'm Antonio Lima",
+                description: `Quality Assurance Engineer with solid experience since 2015, specializing in testing across Mobile, Web, and Back-End platforms. Proven ability to handle the full QA cycle, including test planning, design, execution, bug reporting, and documentation.
+
 Skilled in automated testing using top frameworks and languages for mobile apps, front-end web interfaces, and APIs, with hands-on experience in tools such as Appium, Selenium, Rest Assured, and Cypress.
+
 Strong background in Continuous Integration (CI) and version control systems like Git, Jenkins, Docker, and others.
+
 Deeply familiar with Agile methodologies including Scrum, Kanban, Lean, XP, and Agile testing practices.
+
 Fluent in English and experienced in collaborating with international teams across multiple time zones, contributing to global products with high quality standards.
 
 Not only capable of executing and leading QA processes, but also of implementing quality assurance from scratch in companies of any size and maturity level.
-Additionally, I actively teach and mentor QA professionals, conducting workshops, training sessions, and creating content through my YouTube channel QAlizando, dedicated to education in software quality: youtube.com/@qalizando.
-    </p>
 
-    <div class="links">
-      <a href="https://www.linkedin.com/in/antonio-lima-qalizando/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/GuilhermeLimaRepository" target="_blank">GitHub</a>
-      <a href="https://youtube.com/@qalizando" target="_blank">YouTube</a>
-    </div>
+Additionally, I actively teach and mentor QA professionals, conducting workshops, training sessions, and creating content through my YouTube channel QAlizando, dedicated to education in software quality: youtube.com/@qalizando.`,
+                projectsTitle: "My Projects:",
+                downloadCV: "Download my CV:",
+                contact: "Contact:"
+            },
 
-    <h2 id="projects-title">My Projects:</h2>
-    <ul id="projects">
-      <li><a href="https://github.com/GuilhermeLimaRepository/Cypress-POC" target="_blank">Front-End E2E Tests with Cypress</a></li>
-      <li><a href="https://github.com/GuilhermeLimaRepository/HttPartyTest" target="_blank">API Tests with HTTParty</a></li>
-      <li><a href="https://github.com/GuilhermeLimaRepository/Appium-WebDrive-IO-POC" target="_blank">Mobile E2E Test</a></li>
-    </ul>
+            pt: {
+                title: "Olá! Eu sou o Antonio Lima",
+                description: `Engenheiro de Garantia da Qualidade com sólida experiência desde 2015, especializado em testes para plataformas Mobile, Web e Back-End. Capacidade comprovada de gerenciar todo o ciclo de QA, incluindo planejamento de testes, design, execução, reporte de bugs e documentação.
 
-    <div class="cv-buttons">
-      <p id="download-cv-text"><strong>Download my CV:</strong></p>
-      <a href="resume-eng.pdf" download><button>📄 English</button></a>
-      <a href="resume-eng.pdf" download><button>📄 Português</button></a>
-    </div>
+Especialista em testes automatizados com frameworks e linguagens voltadas para aplicativos mobile, interfaces web e APIs, com experiência prática em ferramentas como Appium, Selenium, Rest Assured e Cypress.
 
-    <p>📫 <strong id="contact-label">Contact:</strong> <a href="mailto:tgee565@gmail.com">tgee565@gmail.com"</a></p>
-  </div>
+Forte background em Integração Contínua (CI) e controle de versão com ferramentas como Git, Jenkins, Docker e outras.
 
-  <script>
-    const translations = {
-      en: {
-        title: "Hello! I'm Antonio Lima",
-        description: "Principal QA with experience in manual testing and automation (Cypress, Appium, API Testing, CI/CD And Many Others).",
-        projectsTitle: "My Projects:",
-        downloadCV: "Download my CV:",
-        contact: "Contact:"
-      },
-      pt: {
-        title: "Olá! Eu sou o Antonio Lima",
-        description: "QA Principal com experiência em testes manuais e automação (Cypress, Appium, Testes de API, CI/CD Entre Outros).",
-        projectsTitle: "Meus Projetos:",
-        downloadCV: "Baixar meu currículo:",
-        contact: "Contato:"
-      }
-    };
+Conhecimento aprofundado em metodologias Ágeis, incluindo Scrum, Kanban, Lean, XP e práticas de teste Ágil.
 
-    function setLanguage(lang) {
-      document.getElementById("title").textContent = translations[lang].title;
-      document.getElementById("description").textContent = translations[lang].description;
-      document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
-      document.getElementById("download-cv-text").textContent = translations[lang].downloadCV;
-      document.getElementById("contact-label").textContent = translations[lang].contact;
-    }
-  </script>
+Fluente em inglês e acostumado a colaborar com times internacionais em múltiplos fusos horários, contribuindo com produtos globais de alta qualidade.
+
+Capaz não apenas de executar e liderar processos de QA, mas também de implementar QA do zero em empresas de qualquer porte ou estágio de maturidade.
+
+Além disso, ensino e mentoro profissionais de QA, conduzindo workshops, treinamentos e criando conteúdo no meu canal do YouTube, o QAlizando: youtube.com/@qalizando.`,
+                projectsTitle: "Meus Projetos:",
+                downloadCV: "Baixar meu currículo:",
+                contact: "Contato:"
+            }
+        };
+
+
+        function setLanguage(lang) {
+            document.getElementById("title").textContent = translations[lang].title;
+            document.getElementById("description").textContent = translations[lang].description;
+            document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
+            document.getElementById("download-cv-text").textContent = translations[lang].downloadCV;
+            document.getElementById("contact-label").textContent = translations[lang].contact;
+        }
+    </script>
 </body>
+
 </html>
